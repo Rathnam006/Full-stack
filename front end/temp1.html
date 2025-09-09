@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vivek - Beginner Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #28a745;   /* green */
+      --accent: #ff6f61;    /* coral red */
+      --bg: linear-gradient(to right, #f1f1f1, #fafafa);
+      --card-bg: #fff;
+      --text: #333;
+      --border: 1px solid #ddd;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .section-title {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      text-align: center;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    /* About Section */
+    .about {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 10px;
+      border: var(--border);
+      margin-bottom: 2rem;
+    }
+    .about-text {
+      flex: 2;
+      margin-right: 1.5rem;
+    }
+    .about-img {
+      flex: 1;
+      max-width: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--primary);
+    }
+    .about-img img {
+      width: 100%;
+      display: block;
+    }
+    /* Skills */
+    .skills {
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .skill-card {
+      background: var(--card-bg);
+      padding: 0.8rem 1.2rem;
+      border-radius: 6px;
+      border: var(--border);
+      font-weight: 600;
+      color: var(--primary);
+      transition: 0.2s;
+    }
+    .skill-card:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      border: var(--border);
+      overflow: hidden;
+      transition: 0.2s;
+    }
+    .project-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-bottom: var(--border);
+    }
+    .project-card div {
+      padding: 1rem;
+    }
+    .project-card h3 {
+      margin: 0 0 0.5rem;
+      color: var(--primary);
+    }
+    /* Contact */
+    .contact {
+      background: var(--card-bg);
+      border: var(--border);
+      padding: 1.5rem;
+      border-radius: 8px;
+      max-width: 400px;
+      margin-left: 0;
+    }
+    .contact input, .contact textarea, .contact button {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.7rem;
+      border: var(--border);
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    .contact button {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact button:hover {
+      background: var(--accent);
+    }
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 700px) {
+      .about {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .about-text {
+        margin: 0 0 1rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vivek</h1>
+    <p>Beginner Web Developer</p>
+  </header>
+
+  <div class="container">
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="about-text">
+        <h2 class="section-title">About Me</h2>
+        <p>
+          Hi! I'm Vivek, a beginner developer exploring the world of web development. 
+          I enjoy learning new technologies and building simple projects to strengthen my skills.
+        </p>
+      </div>
+      <div class="about-img">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Vivek">
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-list">
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript (Basics)</div>
+        <div class="skill-card">Git</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <img src="https://picsum.photos/400/200?random=11" alt="Project 1">
+          <div>
+            <h3>Simple Portfolio</h3>
+            <p>A basic portfolio page built using only HTML and CSS.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://picsum.photos/400/200?random=12" alt="Project 2">
+          <div>
+            <h3>To-Do List</h3>
+            <p>A beginner JavaScript project for managing daily tasks.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://picsum.photos/400/200?random=13" alt="Project 3">
+          <div>
+            <h3>Weather App</h3>
+            <p>A simple app fetching weather info using free APIs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contact</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2024 Vivek. All rights reserved.
+  </footer>
+</body>
+</html>
