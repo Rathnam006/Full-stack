@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        /* Global reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            padding: 40px 0;
+        }
+
+        /* Form container */
+        .form-container {
+            max-width: 600px;
+            width: 100%;
+            background-color: #fff;
+            padding: 30px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid #ddd;
+        }
+
+        h1 {
+            font-size: 26px;
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .registration-form label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #555;
+            display: block;
+        }
+
+        .registration-form input,
+        .registration-form select,
+        .registration-form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #f9fafb;
+            color: #555;
+            transition: border-color 0.3s ease;
+        }
+
+        .registration-form input:focus,
+        .registration-form select:focus,
+        .registration-form textarea:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        .registration-form textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .registration-form input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        /* Gender options layout */
+        .gender-option {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        /* Button Styling */
+        .registration-form button {
+            padding: 14px 30px;
+            background-color: #3498db;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+        }
+
+        .registration-form button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Student Registration Form</h1>
+        <form action="#" method="POST" class="registration-form">
+            <!-- Full Name -->
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required placeholder="Enter your full name">
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+            <!-- Date of Birth -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <!-- Address -->
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required placeholder="Enter your address"></textarea>
+
+            <!-- State -->
+            <label for="state">State:</label>
+            <select id="state" name="state" required>
+                <option value="">Select your state</option>
+                <option value="ap">ap</option>
+                <option value="telangana">telangana</option>
+                <option value="Tamilnadu">Tamilnadu</option>
+                <option value="kerala">kerala</option>
+            </select>
+
+            <!-- Course -->
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="">Select your course</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="CSM">SHIVA</option>
+                <option value="EEE">EEE</option>
+                <option value="ECE">ECE</option>
+            </select>
+
+            <!-- Gender -->
+            <label for="gender">Gender</label>
+             <select id="gender" name="gender" >
+                <option value="">select gender</option>
+                <option value="male">MALE</option>
+                <option value="femle">FEMALE</option>
+             </select>
+            <!-- <div class="gender-option">
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+            </div>
+            <div class="gender-option">
+                <input type="radio" id="female" name="gender" value="Female" required>
+                <label for="female">Female</label>
+            </div>
+            <div class="gender-option">
+                <input type="radio" id="other" name="gender" value="Other" required>
+                <label for="other">Other</label>
+            </div> -->
+
+            <!-- Submit Button -->
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
