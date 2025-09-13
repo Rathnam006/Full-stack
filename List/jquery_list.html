@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>jQuery Example</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $("#mainBtn").click(() => {
+      $("h1").text("Clicked!");
+      $(".box").css("background", "pink");
+    });
+    $("#mainBtn").dblclick(() => {
+      $("h1").text("Double clicked!");
+      $(".box").css("background", "lightblue");
+    });
+    $("#mainBtn").hover(() => {
+      $("h1").text("Hovered!");
+      $(".box").css("background", "cyan");
+    });
+
+    $("#addItem").click(() => {
+      $("#itemList").append("<li>New Item</li>");
+
+    });
+
+    $("#removeLast").click(() => $("#itemList li:last").remove());
+
+    $("#inputField").on("input", () => {
+      $("#textOutput").text($("#inputField").val());
+    });
+  });
+</script>
+
+<style>
+  body { font-family: Arial; padding: 20px; background: rgb(229, 233, 233); }
+  h1 { color: #1d1c1c; }
+  .box { background: rgba(158, 170, 107, 0.137); padding: 10px; margin: 10px 0; }
+  button { margin-right: 10px; padding: 6px 12px; cursor: pointer; }
+  input { padding: 6px; width: 200px; margin-bottom: 10px; }
+  ul { padding-left: 20px; }
+  .complete{ margin-top: 30px; color:yellow;}
+</style>
+
+</head>
+<body>
+
+<h1>jQuery </h1>
+
+<button id="mainBtn">Click me</button>
+
+<div class="box"><p>jQuery box</p></div>
+
+<input id="inputField" type="text" placeholder="Type here..." />
+<p id="textOutput">Initial text</p>
+
+<ul id="itemList"><li>Item 1</li></ul>
+
+<button id="addItem">Add Item</button>
+<button id="removeLast">Remove Last</button>
+<div class complete>
+    <button id="complete">complete</button>
+</div>
+</body>
+</html>
